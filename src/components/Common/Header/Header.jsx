@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Container, Row, Navbar, Offcanvas, Nav, NavDropdown } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
-
+import "../Header/header.css";
 
 const Header = () => {
 
@@ -10,12 +10,31 @@ const Header = () => {
 
     const toggleMenu =()=>{
         setOpen(!open)
+    };
+
+    useEffect(()=>{
+      window.addEventListener("scroll", isSticky);
+      return ()=>{
+        window.removeEventListener("scroll", isSticky)
+      }
+    })
+
+    //Sticky Header
+    const isSticky=(e)=>{
+      const header = document.querySelector('.header-section');
+      const scrollTop = window.scroll;
+      scrollTop >= 120 ? header.classList.add('is-sticky') :
+      header.classList.remove('is-sticky')
     }
+
+
+
+
   return (
-    <section className='header-section'>
+    <header className='header-section'>
         <Container>
-            <Row>
-                <Navbar  expand="lg" className="bg-body-tertiary mb-3">
+            
+                <Navbar  expand="lg" className="p-0">
           {/* Logo Section*/}
             <Navbar.Brand>
                 <NavLink to='/'>Weekndmonks</NavLink>
@@ -33,7 +52,7 @@ const Header = () => {
             {/* Mobile Logo Section*/}
               <Offcanvas.Header>
                 <h1 className='logo'>Weekndmonks</h1>
-                <span className='navbar-toogler ms-auto' onClick={toggleMenu}>
+                <span className='navbar-toggler ms-auto' onClick={toggleMenu}>
                     <i className="bi bi-x-lg"></i>
                 </span>
               </Offcanvas.Header>
@@ -70,10 +89,10 @@ const Header = () => {
 
             </div>
           
-        </Navbar>
-            </Row>
+                </Navbar>
+            
         </Container>
-    </section>
+    </header>
   )
 }
 
