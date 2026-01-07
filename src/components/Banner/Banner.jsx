@@ -8,7 +8,7 @@ const Banner = () => {
         <section className='silder'>
             <Carousel varient="dark">
       <Carousel.Item>
-        <img src={silderImg} className='d-block w-100' alt="First slide" />
+        <img src={silderImg} className='d-block w-100 ' style={{height: "690px"}} alt="First slide" />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
