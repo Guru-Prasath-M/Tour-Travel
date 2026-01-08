@@ -1,5 +1,6 @@
 import React from 'react'
 import silderImg from "../../assets/images/1.png"
+import silderImg1 from "../../assets/images/3.png"
 import { Carousel } from 'react-bootstrap';
 
 const Banner = () => {
@@ -8,20 +9,20 @@ const Banner = () => {
         <section className='silder'>
             <Carousel varient="dark">
       <Carousel.Item>
-        <img src={silderImg} className='d-block w-100 ' style={{height: "690px"}} alt="First slide" />
+        <img src={silderImg} className='d-block w-100 ' style={{height: "695px"}} alt="First slide" />
         <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      {/* <Carousel.Item>
-        <ExampleCarouselImage text="Second slide" />
+      <Carousel.Item>
+        <img src={silderImg1} className='d-block w-100 ' style={{height: "695px"}} alt="First slide" />
         <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
+      {/* <Carousel.Item>
         <ExampleCarouselImage text="Third slide" />
         <Carousel.Caption>
           <h3>Third slide label</h3>
