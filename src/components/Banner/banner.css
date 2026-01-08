@@ -1,0 +1,28 @@
+.slider{
+    z-index: 99;
+}
+
+.slider .carousel{
+    position: relative;
+}
+
+.slider .carousel .carousel-item .carousel-caption h5 {
+    font-size: 55px;
+    color: var(--white);
+    line-height: 140%;
+    text-align: center;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+}
+
+.slider .carousel .carousel-item .carousel-caption h5 span {
+    display: block;
+}
+
+.slider .carousel .carousel-item .carousel-caption .silder_des p{
+    font-size: var(--subTitle);
+    color: var(--white);
+    line-height: 150%;
+    text-align: center;
+    font-weight: 500;
+}

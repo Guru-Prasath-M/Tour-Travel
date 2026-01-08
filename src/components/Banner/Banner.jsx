@@ -2,6 +2,7 @@ import React from 'react'
 import silderImg from "../../assets/images/1.png"
 import silderImg1 from "../../assets/images/3.png"
 import { Carousel } from 'react-bootstrap';
+import "../Banner/banner.css"
 
 const Banner = () => {
   return (
@@ -11,26 +12,25 @@ const Banner = () => {
       <Carousel.Item>
         <img src={silderImg} className='d-block w-100 ' style={{height: "695px"}} alt="First slide" />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <div className='silder_des'>
+            <h5 className='heading'>JOURNEY TO  <span>EXPLORE WORLD</span></h5>
+          <p className='sub_text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel dolorem error porro totam, eveniet ipsa nisi facere placeat quo alias rerum reprehenderit nam minima neque, amet, architecto at. Reprehenderit, vel?</p>
+          </div>
+          
         </Carousel.Caption>
       </Carousel.Item>
+
+
       <Carousel.Item>
         <img src={silderImg1} className='d-block w-100 ' style={{height: "695px"}} alt="First slide" />
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <div className='silder_des'>
+            <h5 className='heading'>BEAUTIFUL PLACE  <span>TO VISIT</span></h5>
+          <p className='sub_text'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel dolorem error porro totam, eveniet ipsa nisi facere placeat quo alias rerum reprehenderit nam minima neque, amet, architecto at. Reprehenderit, vel?</p>
+          </div>
+          
         </Carousel.Caption>
       </Carousel.Item>
-      {/* <Carousel.Item>
-        <ExampleCarouselImage text="Third slide" />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item> */}
     </Carousel>
         </section>
     </>
